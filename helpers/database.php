@@ -4,7 +4,8 @@
 Class Database {
 
 	
-	private $db_user, $db_pass, $db_name, $db_host, $connection;
+	private $db_user, $db_pass, $db_name, $db_host;
+	public $connection;
 	private $db_config; 
 	
 
@@ -17,7 +18,7 @@ Class Database {
 
 		$this->db_name = ($db_name == null) ? $database['name'] : $db_name;
 
-		return $this->connectDB();
+		$this->connectDB();
 	}
 
 	public function setUser($user = null, $pass = null ){
@@ -91,7 +92,7 @@ Class Database {
 	}
 	
 	public function prepared_exec_and_fetch($query, $bind_param, $value_array){
-		if(is_array($value_array) {
+		if(is_array($value_array)) {
 			array_unshift($value_array, $bind_param);
 		} else {
 			return false;

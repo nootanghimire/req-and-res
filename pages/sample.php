@@ -8,3 +8,9 @@ Welcome to Ree-qya-ndres framework. Please open up index.php :) (with your text 
 	   echo "<br> We can also use php function inside this file Let me show you current  timestamp <br>";
 	   echo time();
 	?>
+
+	<br>
+	<br>
+	To move around: Click <a href="<?php echo $var2; ?>">here.</a>
+	<br>
+	<br>

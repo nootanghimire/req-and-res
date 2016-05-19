@@ -17,6 +17,10 @@ spl_autoload_register(function($class){
 
 		include "app/".strtolower($class).".php";
 
+	} elseif (file_exists("model/".strtolower($class).".php")) {
+		
+		include "model/".strtolower($class).".php";
+
 	} else {
 
 		die("Could not Load Class: ". $class);
